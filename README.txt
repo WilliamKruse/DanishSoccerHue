@@ -1,7 +1,10 @@
-<< THIS APP WAS MADE WAS EDUCATIONAL PURPOSES ONLY >>
+<< THIS APP WAS MADE FOR EDUCATIONAL PURPOSES ONLY >>
 
-We wanted to make an app that could track the Danish soccer teams live scores at the FIFA world cup.
+We wanted to make an app, that could track the Danish soccerteam's live-scores at the FIFA world cup.
 ONLY to notify our Phillips Hue lights, anytime Denmark would score a goal!
+We wanted to celebrate our victories, bathed in the red and white lights of the bulbs.
+
+AND AFTER A HARD DAY OF WORK, HER WE ARE! version 1.0
 
 123 schmeichel er en mur!
 
@@ -24,10 +27,10 @@ now it says: "finder mulig bridge" which means "finding the bridge" wait for it 
 
 3rd stop: if this is your first time connecting enter "nej", if not enter "ja".
 
-IF IT IS YOUR FIRST TIME: YOU NOW HAVE 10 SECONDS TO PRESS THE BUTTON ON YOU PHYSICAL HUE BRIDGE/HUB
-If the connection is made, you should get a key, save that somewhere on your PC please. you will need it next time.
+IF IT IS YOUR FIRST TIME: YOU NOW HAVE 10 SECONDS TO PRESS THE BUTTON ON YOUR PHYSICAL HUE BRIDGE/HUB!
+If the connection is made, you should get a key, save that somewhere on your PC please. You will need it next time.
 
-if its not you first time, and you wrote "ja": Now enter your key that was given to you on your first time.
+If its not you first time, and you wrote "ja": Now enter your key that was given to you on your first time.
 
 Now all there is left is to press enter, and the apliccation should be running.
 You can tell by the update every two seconds in the terminal.
