@@ -13,7 +13,7 @@ Console.ReadLine();
 Console.WriteLine("Finder mulig Bridge...");
 IBridgeLocator locator = new HttpBridgeLocator(); //Or: LocalNetworkScanBridgeLocator, MdnsBridgeLocator, MUdpBasedBridgeLocator
 var bridges = await locator.LocateBridgesAsync(TimeSpan.FromSeconds(5));
-bridges = await HueBridgeDiscovery.CompleteDiscoveryAsync(TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(30));
+//bridges = await HueBridgeDiscovery.CompleteDiscoveryAsync(TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(30));
 
 Console.WriteLine("Bridge fundet: Skriv din IP addresse du kan finde i din hue app.");
 string MinIp = Console.ReadLine();
@@ -52,9 +52,9 @@ while (true)
         while (true)
         {
             await client.SendCommandAsync(lysrød.TurnOn().SetColor(new RGBColor("FF0000")));
-            Thread.Sleep(500);
+            Thread.Sleep(600);
             await client.SendCommandAsync(lyshvid.TurnOn().SetColor(new RGBColor("FFFFFF")));
-            Thread.Sleep(500);
+            Thread.Sleep(600);
             count++;
             if (count == 20)
             {
@@ -86,11 +86,13 @@ while (true)
         dynamic dyn = JsonConvert.DeserializeObject(jsonString);
         foreach (var obj in dyn.events)
         {
-            if (obj.homeTeam.name == "Club Destroyers")
+            if (obj.homeTeam.name == "Denmark")
             {
                 Console.WriteLine("hold fundet");
                 if (obj.homeScore.current > Goals)
                 {
+                    Console.WriteLine("Tidligere mål: " + Goals);
+                    Console.WriteLine("Mål fra API: " + obj.homeScore.current);
                     Goals = obj.homeScore.current;
                     if (firsttime)
                     {
@@ -101,12 +103,13 @@ while (true)
                     return true;
                 }
             }
-            if (obj.awayTeam.name == "Club Destroyers")
+            if (obj.awayTeam.name == "Denmark")
             {
                 Console.WriteLine("hold fundet");
                 if (obj.awayScore.current > Goals)
                 {
-                   
+                    Console.WriteLine("Tidligere mål: " + Goals);
+                    Console.WriteLine("Mål fra API: " + obj.homeScore.current);
                     Goals = obj.awayScore.current;
                     if (firsttime)
                     {
